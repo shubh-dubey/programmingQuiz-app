@@ -1,4 +1,4 @@
-package com.example.android.thequizapp;
+package com.shubh.android.programquiz;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

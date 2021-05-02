@@ -1,4 +1,4 @@
-package com.example.android.thequizapp;
+package com.shubh.android.programquiz;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -19,7 +19,7 @@ import android.widget.Toast;
 
 import java.util.Locale;
 
-public class FirstSectionActivity extends AppCompatActivity {
+public class SecondSectionActivity extends AppCompatActivity {
 
     /* Total time needed for Countdown */
     private static final long START_TIME_IN_MILLIS = 120000;
@@ -38,10 +38,11 @@ public class FirstSectionActivity extends AppCompatActivity {
     /* Color State for Countdown Timer */
     private ColorStateList textColorDefaultCd;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first_section);
+        setContentView(R.layout.activity_second_section);
 
         mTextViewCountDown = findViewById(R.id.text_view_countdown);
 
@@ -51,7 +52,7 @@ public class FirstSectionActivity extends AppCompatActivity {
 
         final RadioGroup rg2 = findViewById(R.id.radio_group_two);
 
-        final CheckBox c1 = findViewById(R.id.first_checkbox), c2 = findViewById(R.id.second_checkbox), c3 = findViewById(R.id.third_checkbox);
+        final CheckBox c1 = findViewById(R.id.first_checkbox), c2 = findViewById(R.id.second_checkbox), c3 = findViewById(R.id.third_checkbox), c4 = findViewById(R.id.fourth_checkbox);
 
         /*Disabling Radio Buttons before start of timer */
         for (int i = 0; i < rg1.getChildCount(); i++) {
@@ -66,6 +67,7 @@ public class FirstSectionActivity extends AppCompatActivity {
         c1.setEnabled(false);
         c2.setEnabled(false);
         c3.setEnabled(false);
+        c4.setEnabled(false);
 
         textColorDefaultCd = mTextViewCountDown.getTextColors();
 
@@ -89,6 +91,7 @@ public class FirstSectionActivity extends AppCompatActivity {
                     c1.setEnabled(true);
                     c2.setEnabled(true);
                     c3.setEnabled(true);
+                    c4.setEnabled(true);
                 }
 
             }
@@ -122,7 +125,7 @@ public class FirstSectionActivity extends AppCompatActivity {
         mCountDownTimer.cancel();
         mTimerRunning = false;
         /* Alert Message created before submitting the quiz */
-        AlertDialog.Builder a_builder = new AlertDialog.Builder(FirstSectionActivity.this);
+        AlertDialog.Builder a_builder = new AlertDialog.Builder(SecondSectionActivity.this);
         a_builder.setMessage("Submit the quiz?")
                 .setCancelable(false)
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
@@ -202,29 +205,28 @@ public class FirstSectionActivity extends AppCompatActivity {
     }
 
 
-    /* Following methods of type boolean are created for checking the correct Answer */
     private boolean checkQuestion1() {
-        RadioGroup rg1 = findViewById(R.id.radio_group_one);
+        RadioGroup rg = findViewById(R.id.radio_group_one);
 
         int q1_ANSWER = R.id.correct_Answer1;
-        return rg1.getCheckedRadioButtonId() == q1_ANSWER;
+        return rg.getCheckedRadioButtonId() == q1_ANSWER;
 
     }
 
     private boolean checkQuestion2() {
-        RadioGroup rg2 = findViewById(R.id.radio_group_two);
+        RadioGroup rg = findViewById(R.id.radio_group_two);
 
         int q2_ANSWER = R.id.correct_Answer2;
-        return rg2.getCheckedRadioButtonId() == q2_ANSWER;
+        return rg.getCheckedRadioButtonId() == q2_ANSWER;
 
     }
 
 
     private boolean checkQuestion3() {
-        EditText e3 = findViewById(R.id.correct_Answer3);
+        EditText et = findViewById(R.id.correct_Answer3);
 
-        String q3_ANSWER = "Dennis Ritchie";
-        return e3.getText().toString().equalsIgnoreCase(q3_ANSWER);
+        String q3_ANSWER = "Byte Code";
+        return et.getText().toString().equalsIgnoreCase(q3_ANSWER);
     }
 
 
@@ -232,9 +234,11 @@ public class FirstSectionActivity extends AppCompatActivity {
         CheckBox c1 = findViewById(R.id.first_checkbox);
         CheckBox c2 = findViewById(R.id.second_checkbox);
         CheckBox c3 = findViewById(R.id.third_checkbox);
+        CheckBox c4 = findViewById(R.id.fourth_checkbox);
 
-        return c1.isChecked() && c2.isChecked() && !c3.isChecked();
+        return c1.isChecked() && c3.isChecked() && !c2.isChecked() && !c4.isChecked();
 
     }
 
 }
+

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.android.thequizapp.SecondSectionActivity">
+    tools:context="com.shubh.android.programquiz.SecondSectionActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -129,7 +129,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="@string/editText_hint" />
+                android:hint="Your answer" />
         </LinearLayout>
 
 

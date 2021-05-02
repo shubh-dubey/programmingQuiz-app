@@ -1,4 +1,4 @@
-package com.example.android.thequizapp;
+package com.shubh.android.programquiz;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_img"
     android:theme="@style/WhiteText"
-    tools:context="com.example.android.thequizapp.MainActivity">
+    tools:context="com.shubh.android.programquiz.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,9 +16,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="30dp"
             android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:text="@string/select_your_choice"
+            android:textColor="#070707"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -28,9 +29,9 @@
             android:layout_height="65dp"
             android:layout_gravity="center"
             android:layout_marginBottom="30dp"
-            android:background="#E64A19"
-            android:text="@string/first_section_button"
+            android:background="@drawable/c"
             android:textAllCaps="true"
+            android:textColor="#313335"
             android:textSize="22sp" />
 
         <Button
@@ -39,8 +40,7 @@
             android:layout_height="65dp"
             android:layout_gravity="center"
             android:layout_marginBottom="30dp"
-            android:background="#03A9F4"
-            android:text="@string/second_section_button"
+            android:background="@drawable/java"
             android:textAllCaps="true"
             android:textSize="22sp" />
 
@@ -50,8 +50,7 @@
             android:layout_height="65dp"
             android:layout_gravity="center"
             android:layout_marginBottom="30dp"
-            android:background="#9C27B0"
-            android:text="@string/third_section_button"
+            android:background="@drawable/python"
             android:textAllCaps="true"
             android:textSize="22sp" />
 

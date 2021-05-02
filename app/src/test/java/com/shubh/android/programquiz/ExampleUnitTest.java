@@ -1,4 +1,4 @@
-package com.example.android.thequizapp;
+package com.shubh.android.programquiz;
 
 import org.junit.Test;
 

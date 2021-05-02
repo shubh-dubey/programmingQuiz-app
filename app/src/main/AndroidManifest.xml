@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android.thequizapp">
+    package="com.shubh.android.programquiz">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.shubh.android.programquiz.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,14 +17,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FirstSectionActivity"
+            android:name="com.shubh.android.programquiz.FirstSectionActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="C" />
         <activity
-            android:name=".SecondSectionActivity"
+            android:name="com.shubh.android.programquiz.SecondSectionActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="Java" />
-        <activity android:name=".ThirdSectionActivity"
+        <activity android:name="com.shubh.android.programquiz.ThirdSectionActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="Python" />
     </application>
